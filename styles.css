@@ -4,10 +4,17 @@ margin: 0;
 padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
 #content {
     display: flex;
     flex-flow: row wrap;
     flex: 1 100%;
+    max-width: 960px;
 }
 
 header, main, article, section, aside, footer, nav {
@@ -80,12 +87,34 @@ text-decoration-style: dotted;
     article {
         flex: 1 auto;
         width: 48%;
-        
+        padding: 0 1% 0 1%;        
     }
 }
 
 
 /* desktoptyylit */
 @media only screen and (min-width: 960px) {
+    main {
+        padding: 0 1% 0 1%;
+    }
     
+    article {
+        flex: 20%;
+        padding: 0 1% 0 1%;
+    }
+    
+    aside {
+        order: 1;
+        flex: 1 48%;
+        padding: 0 1% 0 1%;
+    }
+    
+    section {
+        flex: 1 48%;
+        padding: 0 1% 0 1%;
+    }
+    
+    footer {
+        order: 2;
+    }
 }
